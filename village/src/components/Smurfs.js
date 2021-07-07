@@ -11,6 +11,8 @@ class Smurfs extends Component {
           {this.props.smurfs.map(smurf => {
             return (
               <Smurf
+                {...this.props}
+                smurf={smurf}
                 name={smurf.name}
                 id={smurf.id}
                 age={smurf.age}
@@ -25,7 +27,7 @@ class Smurfs extends Component {
   }
 }
 
-Smurf.defaultProps = {
+Smurfs.defaultProps = {
  smurfs: [],
 };
 
